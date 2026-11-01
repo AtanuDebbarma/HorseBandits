@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<!--
+		Troop Bandit Javelin (8). Merchandise + no culture lock: lootable and sold in town markets.
+		Custom blade is is_hidden (forge UI); still registered as UsablePiece so the CraftedItem loads.
+	-->
+	<CraftedItem
+		id="horse_bandits_javelin"
+		name="{=hb_javelin}Bandit Javelin"
+		crafting_template="Javelin"
+		is_merchandise="true"
+		modifier_group="spear_dart_throwing">
+		<Pieces>
+			<Piece id="horse_bandits_javelin_blade" Type="Blade" scale_factor="100"/>
+			<Piece id="default_polearm_guard" Type="Guard" scale_factor="100"/>
+			<Piece id="spear_handle_10" Type="Handle" scale_factor="100"/>
+			<Piece id="spear_pommel_12" Type="Pommel" scale_factor="100"/>
+		</Pieces>
+	</CraftedItem>
+
+	<!-- Bandit Javelin stack 4 for Imperial Bandit Horseman. Same market/loot rules as the x8 version. -->
+	<CraftedItem
+		id="horse_bandits_javelin_4"
+		name="{=hb_javelin}Bandit Javelin"
+		crafting_template="Javelin"
+		is_merchandise="true"
+		modifier_group="spear_dart_throwing">
+		<Pieces>
+			<Piece id="horse_bandits_javelin_blade_4" Type="Blade" scale_factor="100"/>
+			<Piece id="default_polearm_guard" Type="Guard" scale_factor="100"/>
+			<Piece id="spear_handle_10" Type="Handle" scale_factor="100"/>
+			<Piece id="spear_pommel_12" Type="Pommel" scale_factor="100"/>
+		</Pieces>
+	</CraftedItem>
+
+	<!--
+		Troop Large Bag of Simple Javelins (8). Same look as western_javelin_1_t2.
+		Loot C# swaps to vanilla western_javelin_1_t2 (Simple Javelin).
+	-->
+	<CraftedItem
+		id="horse_bandits_large_bag_simple_javelin"
+		name="{=hb_large_bag_simple_javelin}Large Bag of Simple Javelins"
+		crafting_template="Javelin"
+		culture="Culture.horse_bandits"
+		is_merchandise="true"
+		value="1"
+		modifier_group="spear_dart_throwing">
+		<Pieces>
+			<Piece id="horse_bandits_simple_javelin_blade" Type="Blade" scale_factor="100"/>
+			<Piece id="default_polearm_guard" Type="Guard" scale_factor="100"/>
+			<Piece id="spear_handle_2" Type="Handle" scale_factor="100"/>
+			<Piece id="default_polearm_pommel" Type="Pommel" scale_factor="100"/>
+		</Pieces>
+	</CraftedItem>
+
+	<!--
+		Troop stacked piercing quiver (40). Based on vanilla piercing_arrows (23 @ 4 pierce).
+		Merchandise + horse_bandits culture: lootable, not sold in normal towns.
+		Loot C# swaps each stack to 2x vanilla piercing_arrows.
+	-->
+	<Item
+		id="horse_bandits_stacked_piercing_arrows"
+		name="{=hb_stacked_piercing_arrows}Stacked Piercing Arrows"
+		body_name="bo_capsule_arrow"
+		holster_body_name="bo_arrow_bl_a_quiver"
+		mesh="arrow_bl_a"
+		weight="0.041"
+		appearance="1"
+		flying_mesh="arrow_bl_flying"
+		holster_mesh="arrow_bl_a_quiver"
+		holster_mesh_with_weapon="arrow_bl_a_quiver"
+		culture="Culture.horse_bandits"
+		is_merchandise="true"
+		value="1"
+		Type="Arrows"
+		item_holsters="quiver_back_middle:quiver_bolts_2:quiver_bolts"
+		holster_position_shift="0.0,0.0,0.15">
+		<ItemComponent>
+			<Weapon
+				weapon_class="Arrow"
+				stack_amount="40"
+				thrust_speed="0"
+				speed_rating="0"
+				physics_material="missile"
+				missile_speed="10"
+				weapon_length="97"
+				thrust_damage="4"
+				thrust_damage_type="Pierce"
+				item_usage="arrow_right"
+				passby_sound_code="event:/mission/combat/missile/passby"
+				rotation="0, -80, 25"
+				sticking_position="0,-0.97,0"
+				sticking_rotation="90,0,0"
+				center_of_mass="0,0,-0.13"
+				modifier_group="arrow">
+				<WeaponFlags
+					Consumable="true"
+					AmmoSticksWhenShot="true"
+					AmmoBreaksOnBounceBack="true"/>
+			</Weapon>
+		</ItemComponent>
+	</Item>
+</Items>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+	<tags>
+		<tag language="English"/>
+	</tags>
+	<strings>
+		<string id="hb_culture_name" text="Horse Bandits"/>
+		<string id="hb_javelin" text="Bandit Javelin"/>
+		<string id="hb_javelin_blade" text="Bandit Javelin Head"/>
+		<string id="hb_javelin_blade_4" text="Bandit Javelin Head"/>
+		<string id="hb_stacked_piercing_arrows" text="Stacked Piercing Arrows"/>
+		<string id="hb_mounted_huntsman" text="Mounted Huntsman"/>
+		<string id="hb_mounted_packmaster" text="Mounted Packmaster"/>
+		<string id="hb_imperial_bandit_horseman" text="Imperial Bandit Horseman"/>
+		<string id="hb_imperial_elite_bandit_horseman" text="Imperial Elite Bandit Horseman"/>
+		<string id="hb_chief" text="Horse Bandit Chief"/>
+		<string id="hb_boss" text="Horse Bandit Boss"/>
+		<string id="hb_simple_javelin_blade" text="Large Bag Simple Javelin Head"/>
+		<string id="hb_large_bag_simple_javelin" text="Large Bag of Simple Javelins"/>
+		<string id="hb_vlandian_brigand_champion" text="Vlandian Brigand Champion"/>
+		<string id="hb_vlandian_brigand_banner_knight" text="Vlandian Brigand Banner Knight"/>
+		<string id="hb_mcm_title" text="Horse Bandits"/>
+		<string id="hb_mcm_group_spawn" text="Mounted Pillagers and Ransackers"/>
+		<string id="hb_mcm_spawn_hint" text="On by default. Each day, about 35 percent of eligible bandit parties in Empire, Vlandia, and Sturgia are picked once. The sliders set how much of a picked party is replaced with Mounted Pillagers and Mounted Ransackers. Off stops new placements. Parties already changed are left as they are. Parties at sea are never changed."/>
+		<string id="hb_mcm_looters_name" text="Looters"/>
+		<string id="hb_mcm_deserters_name" text="Deserters"/>
+		<string id="hb_mcm_mountain_name" text="Mountain Bandits"/>
+		<string id="hb_mcm_forest_name" text="Forest Bandits"/>
+		<string id="hb_mcm_desert_name" text="Desert Bandits"/>
+		<string id="hb_mcm_sea_name" text="Sea Raiders"/>
+		<string id="hb_mcm_steppe_name" text="Steppe Bandits"/>
+		<string id="hb_mcm_group_warsails" text="War Sails"/>
+		<string id="hb_mcm_northern_name" text="Northern Sea Raiders"/>
+		<string id="hb_mcm_corsairs_name" text="Corsairs"/>
+		<string id="hb_mcm_group_chief" text="Horse Bandit Chief and Boss"/>
+		<string id="hb_mcm_group_highwayman" text="Highwayman"/>
+		<string id="hb_mcm_percent_name" text="Replaced troops percent"/>
+		<string id="hb_mcm_percent_hint" text="Percent of that clan's regular troops replaced with Mounted Pillagers and Mounted Ransackers. Default 35, which is what the mod does now. From 1 to 80. The rest of the party stays vanilla."/>
+		<string id="hb_mcm_off_hint" text="Off by default, as the mod is now. Land parties of this clan in Empire, Vlandia, and Sturgia can be partly replaced. Parties at sea, and parties that cannot travel on land, stay vanilla."/>
+		<string id="hb_mcm_on_hint" text="Land parties of this clan in Empire, Vlandia, and Sturgia can be partly replaced. Parties at sea, and parties that cannot travel on land, stay vanilla."/>
+		<string id="hb_mcm_warsails_hint" text="On by default. Shows the War Sails bandit clans below. Both start off, matching the mod now. Off leaves those parties vanilla. Does nothing when War Sails is not installed."/>
+		<string id="hb_mcm_northern_hint" text="Off by default, as the mod is now. War Sails Sea Raiders: Sea Raider troops, looter culture, and ships. Only their land parties in Empire, Vlandia, and Sturgia can be partly replaced. Parties at sea stay vanilla."/>
+		<string id="hb_mcm_corsairs_hint" text="Off by default. Corsairs have their own troops and ships. Only their land parties in Empire, Vlandia, and Sturgia can be partly replaced. Parties at sea stay vanilla."/>
+		<string id="hb_mcm_chief_hint" text="On by default. Boss parties only. One switch covers both, because Boss is the upgrade of Chief. This percent of the replaced troops are Chief or Boss, split between them. Default 50, matching the current mix. From 1 to 80. The rest of the replaced troops are Mounted Pillagers and Mounted Ransackers."/>
+		<string id="hb_mcm_chief_percent_name" text="Chief and Boss percent"/>
+		<string id="hb_mcm_chief_percent_hint" text="Percent of the replaced troops on a boss party that are Horse Bandit Chief or Horse Bandit Boss. Default 50. From 1 to 80."/>
+		<string id="hb_mcm_highwayman_name" text="Highwayman upgrades to Brigand Champion"/>
+		<string id="hb_mcm_highwayman_hint" text="Upgrades to Vlandian Brigand Champion, then Banner Knight. Off restores Vlandian Champion. Reopen the encyclopedia page."/>
+	</strings>
+</base>

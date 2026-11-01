@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CraftingPieces>
+	<!-- Clone of spear_blade_27 (Jereed head) with stack_amount 8.
+	     Must also be listed as UsablePiece on the Javelin template (see crafting_templates XSLT)
+	     or Bannerlord invalidates the piece and horse_bandits_javelin becomes null. is_hidden keeps it out of the forge UI. -->
+	<CraftingPiece
+		id="horse_bandits_javelin_blade"
+		name="{=hb_javelin_blade}Bandit Javelin Head"
+		tier="5"
+		piece_type="Blade"
+		mesh="spear_blade_27"
+		length="69.5"
+		weight="0.5"
+		is_hidden="true"
+		excluded_item_usage_features="swing">
+		<BladeData
+			stack_amount="8"
+			physics_material="wood_weapon"
+			body_name="bo_spear_b"
+			holster_mesh="throwing_spear_quiver_2"
+			holster_body_name="bo_throwing_spear_quiver_2"
+			holster_mesh_length="94.6">
+			<Thrust
+				damage_type="Pierce"
+				damage_factor="2.8"/>
+		</BladeData>
+		<Materials>
+			<Material id="Iron5" count="2"/>
+		</Materials>
+	</CraftingPiece>
+
+	<!-- Same as Bandit Javelin head but stack 4 for Imperial Bandit Horseman (T4). -->
+	<CraftingPiece
+		id="horse_bandits_javelin_blade_4"
+		name="{=hb_javelin_blade_4}Bandit Javelin Head (4)"
+		tier="5"
+		piece_type="Blade"
+		mesh="spear_blade_27"
+		length="69.5"
+		weight="0.5"
+		is_hidden="true"
+		excluded_item_usage_features="swing">
+		<BladeData
+			stack_amount="4"
+			physics_material="wood_weapon"
+			body_name="bo_spear_b"
+			holster_mesh="throwing_spear_quiver_2"
+			holster_body_name="bo_throwing_spear_quiver_2"
+			holster_mesh_length="94.6">
+			<Thrust
+				damage_type="Pierce"
+				damage_factor="2.8"/>
+		</BladeData>
+		<Materials>
+			<Material id="Iron5" count="2"/>
+		</Materials>
+	</CraftingPiece>
+
+	<!-- Clone of spear_blade_15 (Simple Javelin look) with stack 8 for Brigand cav troops. -->
+	<CraftingPiece
+		id="horse_bandits_simple_javelin_blade"
+		name="{=hb_simple_javelin_blade}Large Bag Simple Javelin Head"
+		tier="2"
+		piece_type="Blade"
+		mesh="spear_blade_15"
+		length="23.2"
+		weight="0.2136"
+		is_hidden="true"
+		excluded_item_usage_features="swing">
+		<BladeData
+			stack_amount="8"
+			physics_material="wood_weapon"
+			body_name="bo_spear_b"
+			holster_mesh="throwing_spear_quiver_1_1"
+			holster_body_name="bo_throwing_spear_quiver_1_1"
+			holster_mesh_length="68.9">
+			<Thrust
+				damage_type="Pierce"
+				damage_factor="1.7"/>
+		</BladeData>
+		<Materials>
+			<Material id="Iron2" count="1"/>
+		</Materials>
+	</CraftingPiece>
+</CraftingPieces>

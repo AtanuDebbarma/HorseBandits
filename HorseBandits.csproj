@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Local settings such as the game folder go in HorseBandits.user.props, which git ignores. -->
+  <Import Project="HorseBandits.user.props" Condition="Exists('HorseBandits.user.props')" />
+
+  <PropertyGroup>
+    <BannerlordDir Condition="'$(BannerlordDir)' == ''">$(BANNERLORD_DIR)</BannerlordDir>
+    <BannerlordDir Condition="'$(BannerlordDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</BannerlordDir>
+    <BannerlordRoot>$(BannerlordDir)</BannerlordRoot>
+    <BannerlordRoot Condition="!HasTrailingSlash('$(BannerlordRoot)')">$(BannerlordRoot)\</BannerlordRoot>
+    <BannerlordBin>$(BannerlordRoot)bin\Win64_Shipping_Client\</BannerlordBin>
+    <BannerlordModules>$(BannerlordRoot)Modules\</BannerlordModules>
+    <DeployToGame Condition="'$(DeployToGame)' == ''">false</DeployToGame>
+
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <Platform Condition="'$(Platform)' == ''">x64</Platform>
+    <ProjectGuid>{8C4E1A27-6B9D-4F30-A15E-3D7C9B2F04A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HorseBandits</RootNamespace>
+    <AssemblyName>HorseBandits</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <LangVersion>5</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <Optimize>true</Optimize>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Deterministic>true</Deterministic>
+    <OutputPath>bin\Win64_Shipping_Client\</OutputPath>
+    <IntermediateOutputPath>obj\</IntermediateOutputPath>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+
+  <!-- Machines without the .NET Framework 4.7.2 targeting pack build against the installed runtime instead. -->
+  <PropertyGroup Condition="!Exists('$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\$(TargetFrameworkVersion)\mscorlib.dll')">
+    <FrameworkPathOverride>$(WINDIR)\Microsoft.NET\Framework64\v4.0.30319</FrameworkPathOverride>
+    <BypassFrameworkInstallChecks>true</BypassFrameworkInstallChecks>
+    <NetStandardPath>$(FrameworkPathOverride)\netstandard.dll</NetStandardPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NetStandardPath)' == ''">
+    <NetStandardPath>$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\$(TargetFrameworkVersion)\Facades\netstandard.dll</NetStandardPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="netstandard">
+      <HintPath>$(NetStandardPath)</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade">
+      <HintPath>$(BannerlordBin)TaleWorlds.MountAndBlade.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.CampaignSystem">
+      <HintPath>$(BannerlordBin)TaleWorlds.CampaignSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Core">
+      <HintPath>$(BannerlordBin)TaleWorlds.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Library">
+      <HintPath>$(BannerlordBin)TaleWorlds.Library.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Localization">
+      <HintPath>$(BannerlordBin)TaleWorlds.Localization.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.ObjectSystem">
+      <HintPath>$(BannerlordBin)TaleWorlds.ObjectSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.SaveSystem">
+      <HintPath>$(BannerlordBin)TaleWorlds.SaveSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MCMv5">
+      <HintPath>$(BannerlordModules)Bannerlord.MBOptionScreen\bin\Win64_Shipping_Client\MCMv5.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="src\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="SubModule.xml" />
+    <None Include="ModuleData\**\*" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <Target Name="CheckBannerlordDir" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(BannerlordBin)TaleWorlds.CampaignSystem.dll')" Text="Bannerlord was not found in '$(BannerlordDir)'. Set BannerlordDir in HorseBandits.user.props, set the BANNERLORD_DIR environment variable, or pass /p:BannerlordDir=&quot;...&quot;." />
+    <Error Condition="!Exists('$(BannerlordModules)Bannerlord.MBOptionScreen\bin\Win64_Shipping_Client\MCMv5.dll')" Text="Mod Configuration Menu was not found in '$(BannerlordModules)Bannerlord.MBOptionScreen'. Install MCM before building." />
+  </Target>
+
+  <Target Name="DeployToGame" AfterTargets="Build" Condition="'$(DeployToGame)' == 'true'">
+    <ItemGroup>
+      <ModuleDataFiles Include="ModuleData\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="SubModule.xml" DestinationFolder="$(BannerlordModules)HorseBandits\" />
+    <Copy SourceFiles="@(ModuleDataFiles)" DestinationFiles="@(ModuleDataFiles->'$(BannerlordModules)HorseBandits\ModuleData\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BannerlordModules)HorseBandits\bin\Win64_Shipping_Client\" />
+    <Message Importance="high" Text="Deployed Horse Bandits to $(BannerlordModules)HorseBandits" />
+  </Target>
+</Project>

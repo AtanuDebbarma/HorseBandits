@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+	<Name value="Horse Bandits"/>
+	<Id value="HorseBandits"/>
+	<Version value="v1.0.0"/>
+	<DefaultModule value="false"/>
+	<ModuleCategory value="Singleplayer"/>
+	<ModuleType value="Community"/>
+	<Official value="false"/>
+	<DependedModules>
+		<DependedModule Id="Native" DependentVersion="v1.4.8"/>
+		<DependedModule Id="SandBoxCore" DependentVersion="v1.4.8"/>
+		<DependedModule Id="Sandbox" DependentVersion="v1.4.8"/>
+		<DependedModule Id="StoryMode" Optional="true"/>
+		<DependedModule Id="NavalDLC" Optional="true"/>
+		<DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.12.3"/>
+	</DependedModules>
+	<DependedModuleMetadatas>
+		<DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v1.4.8"/>
+		<DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v1.4.8"/>
+		<DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v1.4.8"/>
+		<DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" optional="true"/>
+		<DependedModuleMetadata id="NavalDLC" order="LoadBeforeThis" optional="true"/>
+		<DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.12.3"/>
+	</DependedModuleMetadatas>
+	<SubModules>
+		<SubModule>
+			<Name value="HorseBandits"/>
+			<DLLName value="HorseBandits.dll"/>
+			<SubModuleClassType value="HorseBandits.HorseBanditsSubModule"/>
+			<Tags>
+				<Tag key="DedicatedServerType" value="none"/>
+				<Tag key="IsNoRenderModeElement" value="false"/>
+			</Tags>
+		</SubModule>
+	</SubModules>
+	<Xmls>
+		<XmlNode>
+			<XmlName id="SPCultures" path="spcultures"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="partyTemplates" path="partyTemplates"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="CraftingPieces" path="horse_bandits_crafting_pieces"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="CraftingTemplates" path="XSLT/horse_bandits_crafting_templates"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="WeaponDescriptions" path="XSLT/horse_bandits_weapon_descriptions"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="Items" path="horse_bandits_items"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="horse_bandits_characters"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="XSLT/horse_bandits_troop_branch"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+			</IncludedGameTypes>
+		</XmlNode>
+	</Xmls>
+</Module>

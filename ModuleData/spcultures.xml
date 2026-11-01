@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SPCultures>
+	<!--
+		Culture retained for custom items/chief/boss and culture-linked templates.
+		No custom clan/faction and no custom hideouts: parties stay vanilla-owned;
+		HorseBanditsConversionBehavior only swaps roster troops in Empire/Vlandia/Sturgia.
+	-->
+	<Culture
+		id="horse_bandits"
+		name="{=hb_culture_name}Horse Bandits"
+		bandit_chief="NPCCharacter.horse_bandits_chief"
+		bandit_raider="NPCCharacter.mounted_ransacker"
+		bandit_bandit="NPCCharacter.mounted_pillager"
+		bandit_boss="NPCCharacter.horse_bandits_boss"
+		elite_basic_troop="NPCCharacter.mounted_ransacker"
+		basic_troop="NPCCharacter.mounted_pillager"
+		is_bandit="true"
+		can_have_settlement="false"
+		encounter_background_mesh="encounter_mountain_bandit"
+		bandit_boss_party_template="PartyTemplate.horse_bandits_boss_party_template">
+		<banner_bearer_replacement_weapons>
+			<item id="Item.iron_spatha_sword_t2"/>
+			<item id="Item.empire_sword_1_t2"/>
+			<item id="Item.empire_sword_2_t3"/>
+			<item id="Item.empire_sword_6_t5"/>
+		</banner_bearer_replacement_weapons>
+		<male_names>
+			<name name="{=v9B50R0Q}Acarion"/>
+			<name name="{=aeLgc0cU}Acthon"/>
+			<name name="{=tWDyWroN}Amnon"/>
+			<name name="{=uTFjknE2}Andros"/>
+			<name name="{=fXgftgNv}Aphanys"/>
+			<name name="{=QjJAbaoT}Apys"/>
+			<name name="{=zInIqBD0}Arenicos"/>
+			<name name="{=W1uwgvAQ}Arion"/>
+			<name name="{=5VzWRMTn}Artimendros"/>
+			<name name="{=rGuYLmez}Ascyron"/>
+			<name name="{=J1nh9YiN}Atilon"/>
+			<name name="{=NBAGX54b}Avigos"/>
+			<name name="{=9cDw6vPF}Cadomenos"/>
+			<name name="{=R11i2uVl}Calytos"/>
+			<name name="{=lD1sl2XC}Camnon"/>
+			<name name="{=LP7yYoGQ}Caribos"/>
+			<name name="{=VhbasI9J}Castor"/>
+			<name name="{=VG9ng2n2}Chandion"/>
+			<name name="{=aezwJGvY}Chenon"/>
+			<name name="{=acp2IcMs}Crotor"/>
+		</male_names>
+		<female_names>
+			<name name="{=h8DsXm7X}Achena"/>
+			<name name="{=BNnLbOkN}Adinea"/>
+			<name name="{=EGatdCLg}Alena"/>
+			<name name="{=UPaP0B2L}Alchyla"/>
+			<name name="{=QyXwJXIV}Andrasa"/>
+			<name name="{=NM5f1Q6I}Ariada"/>
+			<name name="{=3RbayfTG}Ascytala"/>
+			<name name="{=bmHAYBwX}Catila"/>
+			<name name="{=AdK4Ilzw}Chalia"/>
+			<name name="{=xVSOKf0p}Chara"/>
+			<name name="{=915frsPd}Corena"/>
+			<name name="{=KPQqENbd}Carinila"/>
+			<name name="{=BNuZ6nvd}Daniria"/>
+			<name name="{=sEgUB3jW}Deasora"/>
+			<name name="{=YBGCXSEx}Debana"/>
+			<name name="{=93hivVp6}Donysa"/>
+			<name name="{=0dHy2430}Echalera"/>
+			<name name="{=Oy5dH7gZ}Elea"/>
+			<name name="{=2YbgWjTK}Emyna"/>
+			<name name="{=rA3KybBX}Ethirea"/>
+		</female_names>
+	</Culture>
+</SPCultures>
