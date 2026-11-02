@@ -2,7 +2,7 @@
 
 A Mount & Blade II: Bannerlord mod that places Mounted Pillagers and Mounted Ransackers into existing bandit parties in Empire, Vlandia, and Sturgia. It does not add hideouts or change the map.
 
-**Source:** [Horse Bandits on GitHub][repo]
+**Source:** [Nexus Mods URL](https://www.nexusmods.com/mountandblade2bannerlord/mods/14448)
 
 ## Why this mod exists
 
