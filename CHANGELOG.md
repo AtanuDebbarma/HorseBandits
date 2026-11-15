@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Targets Bannerlord **1.5.7** / War Sails **1.3.7** (Native / SandBox **v1.5.7**, MCM **v5.13.1**).
+- Assembly version aligned with SubModule **v1.0.1**.
+
 ## 1.0.0
 
 First release.

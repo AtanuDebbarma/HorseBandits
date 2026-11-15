@@ -2,26 +2,26 @@
 <Module>
 	<Name value="Horse Bandits"/>
 	<Id value="HorseBandits"/>
-	<Version value="v1.0.0"/>
+	<Version value="v1.0.1"/>
 	<DefaultModule value="false"/>
 	<ModuleCategory value="Singleplayer"/>
 	<ModuleType value="Community"/>
 	<Official value="false"/>
 	<DependedModules>
-		<DependedModule Id="Native" DependentVersion="v1.4.8"/>
-		<DependedModule Id="SandBoxCore" DependentVersion="v1.4.8"/>
-		<DependedModule Id="Sandbox" DependentVersion="v1.4.8"/>
+		<DependedModule Id="Native" DependentVersion="v1.5.7"/>
+		<DependedModule Id="SandBoxCore" DependentVersion="v1.5.7"/>
+		<DependedModule Id="Sandbox" DependentVersion="v1.5.7"/>
 		<DependedModule Id="StoryMode" Optional="true"/>
 		<DependedModule Id="NavalDLC" Optional="true"/>
-		<DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.12.3"/>
+		<DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.13.1"/>
 	</DependedModules>
 	<DependedModuleMetadatas>
-		<DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v1.4.8"/>
-		<DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v1.4.8"/>
-		<DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v1.4.8"/>
+		<DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v1.5.7"/>
+		<DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v1.5.7"/>
+		<DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v1.5.7"/>
 		<DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" optional="true"/>
 		<DependedModuleMetadata id="NavalDLC" order="LoadBeforeThis" optional="true"/>
-		<DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.12.3"/>
+		<DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.13.1"/>
 	</DependedModuleMetadatas>
 	<SubModules>
 		<SubModule>

@@ -66,8 +66,8 @@ Bandit Javelins drop and sell as themselves. A Large Bag of Simple Javelins beco
 
 | Dependency | Tested version | Expected to work with |
 |---|---|---|
-| Mount & Blade II: Bannerlord | 1.4.8 | 1.4.x |
-| War Sails (NavalDLC), optional | 1.2.8 | 1.2.x |
+| Mount & Blade II: Bannerlord | 1.5.7 | 1.5.x |
+| War Sails (NavalDLC), optional | 1.3.7 | 1.3.x |
 | [Harmony][harmony] | 2.4.2 | 2.x |
 | [ButterLib][butterlib] | 2.12.0 | 2.x |
 | [UIExtenderEx][uiextenderex] | 3.0.3 | 3.x, as required by MCM 5.13 |
